@@ -7,7 +7,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto menu">
-      <li class="nav-item  " v-for="(a, i) in menu" :key="i">
+      <li class="nav-item  " v-for="(a, i) in menu" :key="i" @click="close">
         <router-link :to="menu[i].link" class="nav-link">{{menu[i].title}}</router-link>
       </li>
       <!-- <li class="nav-item">
@@ -37,6 +37,11 @@ export default {
                 {title:'product',link:'/product'}
             ]
         }
+    },
+    methods:{
+      close:function(){
+        document.getElementById("navbarNav").classList.remove("show")
+      }
     }
 
 }

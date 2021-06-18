@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-sm-6 col-md-3" v-for="(item, i) in 4 " :key="i">
           <img :src="pdata[i].image" alt="" class="w-100">
-          {{pdata[i].title}}
+          <div @click="$emit('pOpen',pdata[i].id)">{{pdata[i].title}} </div>
         </div>
       </div>
 
