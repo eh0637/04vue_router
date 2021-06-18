@@ -6,6 +6,7 @@
       <button class="btn btn-primary" @click="$emit('pClose')" >닫기</button>
     </div>  
 
+
   </div>
 </template>
 

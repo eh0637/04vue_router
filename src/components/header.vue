@@ -31,6 +31,7 @@ export default {
     name:'header',
         data(){
         return{
+          
             menu:[
                 {title:'home',link:'/'},
                 {title:'company',link:'/company'},

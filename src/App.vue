@@ -15,6 +15,7 @@
     :pNum="pNum"
     @pClose="pView=false"
     
+    
      />
   </transition>
 
