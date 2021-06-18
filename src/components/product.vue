@@ -18,6 +18,8 @@
               </div>
              <div @click="$emit('pOpen',pdata[i].id)">{{pdata[i].title}} </div>
 
+
+
           </div>
     
       </div>
