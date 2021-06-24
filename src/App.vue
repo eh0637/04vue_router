@@ -26,6 +26,7 @@
   <router-view
    v-bind:pdata="pdata"
    @pOpen="pView=true;pNum=$event"
+   :bdata="bdata"
   ></router-view>
 
   <bottom-footer />
@@ -33,9 +34,10 @@
 
 <script>
 import header from './components/header.vue'
-import pdata from './pdata'
+import pdata from './pdata.js'
 import footer from './components/footer.vue'
 import pPop from './components/pPop.vue'
+import bdata from './bdata.js'
 
 export default {
 
@@ -49,7 +51,8 @@ export default {
     return{
       pdata:pdata,
       pView:false,
-      pNum:0
+      pNum:0,
+      bdata:bdata,
     }
   }
 }

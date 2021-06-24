@@ -1,7 +1,7 @@
 <template>
-  <h1>logo</h1>
+  <h1>스파오</h1>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">LOGO</a>
+  <a class="navbar-brand" href="/">스파오</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -33,9 +33,9 @@ export default {
         return{
           
             menu:[
-                {title:'home',link:'/'},
-                {title:'company',link:'/company'},
-                {title:'product',link:'/product'}
+                {title:'HOME',link:'/'},
+                {title:'BOARD',link:'/company'},
+                {title:'PRODUCT',link:'/product'}
             ]
         }
     },
@@ -49,6 +49,7 @@ export default {
 </script>
 
 <style>
+h1{font-weight:bold; padding: 20px 0 ;}
 li.nav-item { width: 100px;}  
 li.nav-item a{ text-align: center; line-height: 40px;}
 a:hover{ text-decoration: none;}

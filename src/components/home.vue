@@ -9,13 +9,13 @@
       <h2>BEST</h2>
       <p>스파오 best 상품</p>
       <div class="row">
-        <div class="col-sm-6 col-md-3" v-for="(item, i) in 4 " :key="i">
+        <div class="col-sm-6 col-md-3 mb-5" v-for="(item, i) in 4 " :key="i">
           <img :src="pdata[i].image" alt="" class="w-100">
           <div @click="$emit('pOpen',pdata[i].id)">{{pdata[i].title}} </div>
         </div>
       </div>
 
-      <div class="btn btn-primary ">
+      <div class="btn btnMore ">
         <router-link to="/product">more</router-link>
       </div>
     </div>
@@ -99,6 +99,10 @@ export default {
 .best p { text-align: center; font-weight:bold; margin-bottom: 20px;}
 
 .mySwiper{margin-bottom: 40px;}
+.btnMore {display: flex;
+    justify-content: center;
+    align-items: center;}
+    .btnMore a:hover{ border-bottom:1px solid #333 ;}
 
 
 </style>
