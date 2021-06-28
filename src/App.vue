@@ -37,15 +37,17 @@ import header from './components/header.vue'
 import pdata from './pdata.js'
 import footer from './components/footer.vue'
 import pPop from './components/pPop.vue'
-import bdata from './bdata.js'
 
+import bdata from './bdata.js'
+import ndata from './ndata.js'
 export default {
 
   name:'app',
   components:{
     'top-header':header,
     'bottom-footer':footer,
-    pPop
+    pPop,
+
   },
   data(){
     return{
@@ -53,6 +55,7 @@ export default {
       pView:false,
       pNum:0,
       bdata:bdata,
+      ndata:ndata
     }
   }
 }
