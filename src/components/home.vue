@@ -15,8 +15,8 @@
     <div class="tab">
       <ul class="clearfix">
 
-        <li @click="current = 0" :class="{active:current == 0}"><a href="#">BEST</a></li>
-        <li @click="current = 1" :class="{active:current == 1}"><a href="#">NEW</a></li>
+        <li @click="current = 0" :class="{active:current == 0}"><a href="#!">BEST</a></li>
+        <li @click="current = 1" :class="{active:current == 1}"><a href="#!">NEW</a></li>
           
       </ul>
     </div>
@@ -30,6 +30,7 @@
       <swiper-slide><img src="images/p4.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/p5.jpg" alt=""></swiper-slide>
       </swiper>
+      <div class="btn mb-4"><a href="/product">more</a></div>
       </div>
       <div v-if="current==1">
        <swiper :slidesPerView="4" :spaceBetween="30" :autoplay="true" :loop="true" class="mySwiper">
@@ -39,6 +40,7 @@
       <swiper-slide><img src="images/n4.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/n5.jpg" alt=""></swiper-slide>
       </swiper>
+      <div class="btn mb-4"><a href="/product">more</a></div>
       </div>
     </div>
     
@@ -200,6 +202,11 @@ export default {
 .tab ul{    display: flex;
     justify-content: center;}
 .bannerS h4{font-weight: bold;}
+.tab li.active a{font-weight: bold;} 
+.btn{    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 
 
 </style>
