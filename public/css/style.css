@@ -35,3 +35,27 @@ h1,h2,h3,h4,h5,p{color: #333;}
         background-image: url(/images/next.svg);
 
     }
+
+    .swiper-container-horizontal>.swiper-pagination-progressbar, .swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+        width: 100%;
+        height: 4px;
+        left: 0;
+        bottom: 0;
+    }
+    
+    
+    .swiper-pagination-progressbar {
+        background: rgba(0,0,0,.25);
+        position: absolute;
+    }
+    
+    .swiper-pagination {
+        position: absolute;
+        text-align: center;
+        transition: .3s opacity;
+        transform: translate3d(0,0,0);
+        z-index: 10;
+    }
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+        background: #333 !important;
+    }
