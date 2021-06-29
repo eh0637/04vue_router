@@ -23,7 +23,9 @@
 
     <div>
       <div v-if="current==0">
-      <swiper :slidesPerView="4" :spaceBetween="30" :autoplay="false" :loop="true" class="mySwiper">
+      <swiper :slidesPerView="4" :spaceBetween="30" :autoplay="false"    :pagination="{
+      type: 'progressbar',
+    }" :loop="true" class="mySwiper">
       <swiper-slide><img src="images/p1.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/p2.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/p3.jpg" alt=""></swiper-slide>
@@ -43,10 +45,17 @@
       <div class="btn mb-4"><router-link to="/product">more</router-link></div>
       </div>
     </div>
-    
+  <div class="bannerSlider">
+    <swiper class="mySwiper" :navigation="true">
+      <swiper-slide><img src="images/banner1.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="images/banner2.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="images/banner3.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="images/banner4.jpg" alt=""></swiper-slide>
+  </swiper>
+  </div>  
   <div class="snsSlide">
-    <h4 class="mb-3">#WIDTH SPAO</h4>  
-      <swiper :slidesPerView="5" :spaceBetween="30"  :loop="true"   :navigation="true" class="mySwiper">
+    <h4 class="mb-5">#WIDTH SPAO</h4>  
+      <swiper :slidesPerView="5" :spaceBetween="30"  :loop="true"    class="mySwiper">
       <swiper-slide><img src="images/sns1.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/sns2.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/sns3.jpg" alt=""></swiper-slide>
@@ -63,7 +72,7 @@
   <div class="container bannerS">
     <div class="row mb-5">
           <div class="col-8">
-            <img src="images/card1.jpg" alt="" class="img-fluid">
+            <img src="images/card1.jpg" alt="" class="img-fluid box_S">
           </div>
           <div class="col-4 d-flex flex-column justify-content-center ">
             <div class="bannerText">
@@ -83,14 +92,14 @@
 
           </div>
           <div class="col-8">
-            <img src="images/card2.jpg" alt="" class="img-fluid">
+            <img src="images/card2.jpg" alt="" class="img-fluid box_S">
           </div>
 
     
         </div>
             <div class="row mb-5">
           <div class="col-8">
-            <img src="images/card3.jpg" alt="" class="img-fluid">
+            <img src="images/card3.jpg" alt="" class="img-fluid box_S">
           </div>
           <div class="col-4 d-flex flex-column justify-content-center ">
             <div class="bannerText">
@@ -114,7 +123,7 @@ import 'swiper/swiper.scss';
 import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
 
-
+import '../../public/css/style.css';
 
 
 // Import Swiper styles
@@ -198,18 +207,30 @@ export default {
 .btnMore {display: flex;
     justify-content: center;
     align-items: center;}
-    .btnMore a:hover{ border-bottom:1px solid #333 ;}
+    .btnMore a:hover{ border-bottom:1px solid #333 ; }
 .tab li {float: left; width: 100px;} 
-.tab li a {display: block; text-align: center; }
+.tab li a {display: block; text-align: center; color: #666; font-weight: normal;}
 .tab ul{    display: flex;
     justify-content: center;}
 .bannerS h4{font-weight: bold;}
-.tab li.active a{font-weight: bold;} 
+.tab li.active a{font-weight: bold; color: #333;} 
 .btn{    display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; font-weight: bold; 
     }
+    .btn a {color: #666; display: block; transition: 0.3s;}
+    .btn a:hover{color: #333; text-shadow: 3px 3px 3px rgba(0,0,0,0.2);}
   .swiper-button-prev{background-image: url(/images/prebtn.svg);}
-
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #ea0b2a !important;
+    }
+.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite  {
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0 !important;
+}
+.box_S{box-shadow: 9px 10px 5px rgba(0,0,0,0.1);}
+.snsSlide h4 {font-weight: bold;}
 
 </style>

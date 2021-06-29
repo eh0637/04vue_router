@@ -16,7 +16,10 @@
                 </div>
               </div>
               </div>
-             <div @click="$emit('pOpen',pdata[i].id)">{{pdata[i].title}} </div>
+             <div class="text-center py-2 productL" @click="$emit('pOpen',pdata[i].id)">
+               <div class="ProductTitle">{{pdata[i].title}} </div>
+               <div class="ProductCost">{{pdata[i].price}}원 </div>
+             </div>
 
 
 
@@ -51,5 +54,8 @@ export default {
 }
 .pro p { text-align: center; font-weight:bold; margin-bottom: 20px;}
 .ptitle { font-weight: bold; padding: 10px 0;}
+.ProductTitle{ font-weight: bold; color: #333; font-size: 1rem;}
+.ProductCost{font-weight: normal; color: #666; font-size: 0.9rem;}
+
 
 </style>
