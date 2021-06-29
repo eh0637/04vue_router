@@ -207,6 +207,7 @@ export default {
     justify-content: center;
     align-items: center;
     }
+  .swiper-button-prev{background-image: url(/images/prebtn.svg);}
 
 
 </style>
