@@ -110,13 +110,15 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/swiper.scss';
 import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
 
 
 
+
 // Import Swiper styles
-import 'swiper/swiper.scss';
+
 import SwiperCore, {
   Pagination,Autoplay,Navigation
 } from 'swiper/core';
