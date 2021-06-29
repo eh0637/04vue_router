@@ -30,7 +30,7 @@
       <swiper-slide><img src="images/p4.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/p5.jpg" alt=""></swiper-slide>
       </swiper>
-      <router-link to="/product">more</router-link>
+      <div class="btn mb-4"><router-link to="/product">more</router-link></div>
       </div>
       <div v-if="current==1">
        <swiper :slidesPerView="4" :spaceBetween="30" :autoplay="true" :loop="true" class="mySwiper">
@@ -40,7 +40,7 @@
       <swiper-slide><img src="images/n4.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/n5.jpg" alt=""></swiper-slide>
       </swiper>
-      <router-link to="/product">more</router-link>
+      <div class="btn mb-4"><router-link to="/product">more</router-link></div>
       </div>
     </div>
     
