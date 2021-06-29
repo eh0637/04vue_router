@@ -220,9 +220,9 @@ export default {
     }
     .btn a {color: #666; display: block; transition: 0.3s;}
     .btn a:hover{color: #333; text-shadow: 3px 3px 3px rgba(0,0,0,0.2);}
-  .swiper-button-prev{background-image: url(/images/prebtn.svg); background: #000;}
+  
   .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-    background: #ea0b2a !important;
+    background: #333 !important;
     }
 .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite  {
     width: 100%;
