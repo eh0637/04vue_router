@@ -2,15 +2,17 @@
   <div>
     <a href="/"><img src="images/logo_spao_b.jpg" alt="" class="logo"></a>
   </div>
-  <nav class="navbar navbar-expand-lg ">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-light ">
+
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto mr-auto menu">
-      <li class="nav-item  " v-for="(a, i) in menu" :key="i" @click="close">
-        <router-link :to="menu[i].link" class="nav-link">{{menu[i].title}}</router-link>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto mr-auto">
+      <li class="nav-item" v-for="(a, i) in menu" :key="i" >
+        <router-link :to="menu[i].link">{{menu[i].title}}</router-link>
       </li>
+
     </ul>
   </div>
 </nav>
@@ -19,6 +21,9 @@
           <router-link :to="menu[i].link">{{menu[i].title}}</router-link>
       </li>
   </ul> -->
+
+
+
 </template>
 
 <script>

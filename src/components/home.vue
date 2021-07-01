@@ -25,8 +25,23 @@
       <div v-if="current==0">
       <swiper :slidesPerView="4" :spaceBetween="30" :autoplay="false"    :pagination="{
       type: 'progressbar',
-    }" :loop="true" class="mySwiper">
-      <swiper-slide><img src="images/p1.jpg" alt=""></swiper-slide>
+    }" :loop="true"
+    :breakpoints='{
+  "0": {
+    "slidesPerView": 2,
+    "spaceBetween": 20
+  },
+  "800": {
+    "slidesPerView": 3,
+    "spaceBetween": 40
+  },
+  "1024": {
+    "slidesPerView": 5,
+    "spaceBetween": 30
+  }
+}'
+     class="mySwiper" >
+      <swiper-slide><img src="images/p1.jpg" alt=""> </swiper-slide>
       <swiper-slide><img src="images/p2.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/p3.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/p4.jpg" alt=""></swiper-slide>
@@ -35,7 +50,24 @@
       <div class="btn mb-4"><router-link to="/product">more</router-link></div>
       </div>
       <div v-if="current==1">
-       <swiper :slidesPerView="4" :spaceBetween="30" :autoplay="true" :loop="true" class="mySwiper">
+       <swiper :slidesPerView="4" :spaceBetween="30" :autoplay="true" :pagination="{
+      type: 'progressbar',
+    }" :loop="true" 
+           :breakpoints='{
+  "0": {
+    "slidesPerView": 2,
+    "spaceBetween": 20
+  },
+  "800": {
+    "slidesPerView": 3,
+    "spaceBetween": 40
+  },
+  "1024": {
+    "slidesPerView": 5,
+    "spaceBetween": 30
+  }
+}'
+       class="mySwiper">
       <swiper-slide><img src="images/n1.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/n2.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/n3.jpg" alt=""></swiper-slide>
@@ -47,7 +79,7 @@
     </div>
   <div class="bannerSlider">
     <swiper class="mySwiper" :navigation="true">
-      <swiper-slide><img src="images/banner1.jpg" alt=""></swiper-slide>
+      <swiper-slide ><img src="images/banner1.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/banner2.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/banner3.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/banner4.jpg" alt=""></swiper-slide>
@@ -55,7 +87,22 @@
   </div>  
   <div class="snsSlide">
     <h4 class="mb-5">#WIDTH SPAO</h4>  
-      <swiper :slidesPerView="5" :spaceBetween="30"  :loop="true"    class="mySwiper">
+      <swiper :slidesPerView="5" :spaceBetween="30"  :loop="true"   
+          :breakpoints='{
+  "0": {
+    "slidesPerView": 3,
+    "spaceBetween": 20
+  },
+  "800": {
+    "slidesPerView": 4,
+    "spaceBetween": 40
+  },
+  "1024": {
+    "slidesPerView": 5,
+    "spaceBetween": 30
+  }
+}'
+       class="mySwiper">
       <swiper-slide><img src="images/sns1.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/sns2.jpg" alt=""></swiper-slide>
       <swiper-slide><img src="images/sns3.jpg" alt=""></swiper-slide>
@@ -68,14 +115,17 @@
   </div>
 
 
+  <div class="container"></div>
+
+
   </div>
   <div class="container bannerS">
     <div class="row mb-5">
-          <div class="col-8">
+          <div class="col-md-8 order-1 order-md-1 mb-5 mb-md-0">
             <img src="images/card1.jpg" alt="" class="img-fluid box_S">
           </div>
-          <div class="col-4 d-flex flex-column justify-content-center ">
-            <div class="bannerText">
+          <div class="col-md-4 col-sm-12 d-flex flex-column justify-content-center order-2 order-md-2 ">
+            <div class="bannerText ml-auto mr-auto ml-md-0  text-center text-md-left">
               <h4>기분좋은 쾌적한 일상</h4>
               <p>이물감이 없고 밀착감이 뛰어나며 <br>겉으로 이너 라인이 드러나지 않아 깔끔합니다.</p>
             </div>
@@ -84,25 +134,25 @@
     
         </div>
             <div class="row mb-5 ">
-            <div class="col-4 d-flex flex-column justify-content-center ">
-            <div class="bannerText">
+            <div class="col-md-4 col-sm-12 d-flex flex-column justify-content-center order-4 order-md-3">
+            <div class="bannerText ml-auto mr-auto ml-md-0  text-center text-md-left">
               <h4>가벼운 청바지가 주는 자유로움</h4>
               <p>여름에 적합한 얇은 소재로 만들어져 <br>더욱 가볍고 쾌적한 착용이 가능합니다. </p>
             </div>
 
           </div>
-          <div class="col-8">
+          <div class="col-md-8 col-sm-12 mb-5 mb-md-0  order-3 order-md-4">
             <img src="images/card2.jpg" alt="" class="img-fluid box_S">
           </div>
 
     
         </div>
             <div class="row mb-5">
-          <div class="col-8">
+          <div class="col-md-8 col-sm-12 mb-5 mb-md-0  order-5 order-md-5">
             <img src="images/card3.jpg" alt="" class="img-fluid box_S">
           </div>
-          <div class="col-4 d-flex flex-column justify-content-center ">
-            <div class="bannerText">
+          <div class="col-md-4  col-sm-12 d-flex flex-column justify-content-center  order-6 order-md-6">
+            <div class="bannerText ml-auto mr-auto ml-md-0  text-center text-md-left">
               <h4>햇살 아래서 더 빛나는 청량감</h4>
               <p>여름 내내 지루하지 않을 <br> 당신만의 셋업을 완성하세요.</p>
             </div>
@@ -112,6 +162,7 @@
         </div>
 
   </div>
+
 
 
 
@@ -133,7 +184,7 @@ import SwiperCore, {
 } from 'swiper/core';
 
 // install Swiper modules
-SwiperCore.use([ Pagination, Autoplay,Navigation ]);
+SwiperCore.use([ Pagination, Autoplay,Navigation]);
 
 
 
@@ -149,6 +200,7 @@ export default {
   data() {
     
     return {
+
       current:0,
         
     };

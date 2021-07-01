@@ -69,5 +69,19 @@ export default [
         content:'(우디) 썸머 그래픽 반팔 티셔츠(WHITE)<br>SPRPB37C ',
         price:19900
     },
+    {
+        id:10,
+        title:'여성 아스킨 캐미솔',
+        image:"images/p1.jpg",
+        content:'[브레이브걸스착용]<br>[COOLTECH]<br> 여성 아스킨 캐미솔_SPWRB25U05',
+        price:9900
+    },
+    {
+        id:11,
+        title:'뚱이잠옷',
+        image:"images/p2.jpg",
+        content:'(스폰지밥) 돌아온 뚱이 잠옷<br>PINK_SPPPB25U01 ',
+        price:29900
+    },
 
 ]
